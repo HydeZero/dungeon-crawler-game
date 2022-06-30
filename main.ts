@@ -1,3 +1,8 @@
+let item_5 = 0
+let item_4 = 0
+let item_3 = 0
+let item_2 = 0
+let item_1 = 0
 let title = textsprite.create("Dungeon Crawler", 0, 2)
 title.setMaxFontHeight(9)
 title.setPosition(60, 30)
@@ -29,10 +34,21 @@ forever(function () {
                                             if (story.checkLastAnswer("Partition A")) {
                                                 while (!(story.checkLastAnswer("Back to Sub-Sector A"))) {
                                                     story.printText("Select Data To Edit:", 75, 60, 1, 0)
-                                                    story.showPlayerChoices("Items", "Current Save Point", "Back to Sector A")
+                                                    story.showPlayerChoices("Items", "Current Save Point", "Back to Sub-Sector A")
                                                     if (story.checkLastAnswer("Items")) {
-                                                        story.printText("Enter The String You Want To Set \"Items\" To", 75, 60, 1, 0)
-                                                        blockSettings.writeString("", "")
+                                                        story.printText("When prompted, put the item number you want in that slot", 75, 60, 1, 0)
+                                                        item_1 = game.askForNumber("Set Item 1 To:")
+                                                        item_2 = game.askForNumber("Set Item 2 To:")
+                                                        item_3 = game.askForNumber("Set Item 3 To:")
+                                                        item_4 = game.askForNumber("Set Item 4 To:")
+                                                        item_5 = game.askForNumber("Set Item 5 To:")
+                                                        blockSettings.writeNumberArray("items", [
+                                                        item_1,
+                                                        item_2,
+                                                        item_3,
+                                                        item_4,
+                                                        item_5
+                                                        ])
                                                     } else if (false) {
                                                     	
                                                     }
