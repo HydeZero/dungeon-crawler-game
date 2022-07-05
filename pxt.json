@@ -1,5 +1,5 @@
 {
-    "name": "Dungeon Crawler With Dev Mode",
+    "name": "Dungeon Crawler",
     "description": "",
     "dependencies": {
         "device": "*",
