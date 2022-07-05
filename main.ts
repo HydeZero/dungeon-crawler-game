@@ -47,7 +47,7 @@ function menu () {
             menu()
         }
     } else if (story.checkLastAnswer("Credits")) {
-        story.printText("Created By HydeZero. All Rights Reserved.", 75, 60, 1, 0)
+        story.printText("Created By HydeZero. All Rights Reserved. Name is not copyrighted as it is a general phrase, feel free to use the name in any project.", 75, 60, 1, 0)
     }
 }
 let storyText: TextSprite = null
